@@ -37,7 +37,12 @@
 - Updating `capacity` before creating the new array in `resize()`
 - Not nulling out `data[size]` after remove (memory leak with objects)
 
+### LeetCode Completed
+- Two Sum — HashMap complement pattern, O(N) time O(N) space
+- Remove Duplicates from Sorted Array — two pointer pattern, O(N) time O(1) space
+- Product of Array Except Self — skipped
+
 ### Next Session
-- LeetCode Week 1 problems:
-  - Easy: Two Sum, Remove Duplicates from Sorted Array
-  - Medium: Product of Array Except Self
+- Week 2: Linked Lists
+  - Build SinglyLinkedList from scratch (insert, delete, search, reverse)
+  - LeetCode: Reverse Linked List, Merge Two Sorted Lists, Linked List Cycle, Remove Nth Node From End
