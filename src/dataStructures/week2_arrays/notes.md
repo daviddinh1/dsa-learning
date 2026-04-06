@@ -32,7 +32,14 @@
 - Not saving `next` before redirecting pointer in `reverse()` — loses rest of list
 - Forgetting `head = prev` at end of `reverse()`
 
+## LeetCode Completed
+- Reverse Linked List — same three-pointer pattern as reverse(), return prev
+- Merge Two Sorted Lists — dummy node + current pointer, advance both lists, attach remainder
+- Linked List Cycle — Floyd's fast/slow pointer, check `fast != null && fast.next != null`
+- Remove Nth Node From End — dummy node + two pointers with n-step head start, `slow.next = slow.next.next`
+
 ## Next Session
-- LeetCode Week 2 problems:
-  - Easy: Reverse Linked List, Merge Two Sorted Lists
-  - Medium: Linked List Cycle, Remove Nth Node From End of List
+- Week 3: Stack & Queue
+  - Build Stack (array + linked list versions)
+  - Build Queue (circular array + linked list versions)
+  - LeetCode: Valid Parentheses, Implement Queue using Stacks, Daily Temperatures, Min Stack

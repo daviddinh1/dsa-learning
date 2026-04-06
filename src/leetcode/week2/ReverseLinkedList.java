@@ -24,3 +24,6 @@ public class ReverseLinkedList{
         return prev;
     }
 }
+
+1 -> 2 -> 4
+1 -> 3 -> 4
