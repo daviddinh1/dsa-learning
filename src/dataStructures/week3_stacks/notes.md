@@ -49,6 +49,23 @@
 | `enqueue` | O(1) |
 | `dequeue` | O(1) |
 
+## ArrayDeque (Java's Modern Alternative)
+- `ArrayDeque` can act as both a Stack and a Queue — it's a double-ended queue (deque)
+- As a **Stack**: use `push()` / `pop()` / `peek()` — operates on the front
+- As a **Queue**: use `offer()` / `poll()` / `peek()` — offer adds to back, poll removes from front
+- Prefer over `Stack<T>` (legacy, synchronized) and `LinkedList` (slower, more memory)
+- Not thread-safe — faster than `Stack<T>` in single-threaded contexts
+
+```java
+Deque<Integer> stack = new ArrayDeque<>();
+stack.push(1);      // push to front
+stack.pop();        // remove from front
+
+Deque<Integer> queue = new ArrayDeque<>();
+queue.offer(1);     // add to back
+queue.poll();       // remove from front
+```
+
 ## Common Mistakes
 - Checking `data.length` instead of `size`/`top` for empty checks
 - Forgetting `return` after the empty-list branch in enqueue (falls through and duplicates node)
