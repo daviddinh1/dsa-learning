@@ -49,6 +49,28 @@
 | `enqueue` | O(1) |
 | `dequeue` | O(1) |
 
+## Monotonic Stack
+- A stack that maintains elements in sorted order (increasing or decreasing)
+- When a new element violates the order, pop until it doesn't
+- Store **indices**, not values — lets you calculate distances between elements
+- Classic pattern: "next greater element" — pop when current element is warmer/larger than top
+
+```java
+// Next greater element template
+Deque<Integer> stack = new ArrayDeque<>();
+int[] answer = new int[n]; // defaults to 0
+for (int i = 0; i < n; i++) {
+    while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
+        int idx = stack.pop();
+        answer[idx] = i - idx;
+    }
+    stack.push(i);
+}
+// remaining indices in stack never found a greater element — stay 0
+```
+
+Common problems: Daily Temperatures, Next Greater Element, Trapping Rain Water, Largest Rectangle in Histogram
+
 ## ArrayDeque (Java's Modern Alternative)
 - `ArrayDeque` can act as both a Stack and a Queue — it's a double-ended queue (deque)
 - As a **Stack**: use `push()` / `pop()` / `peek()` — operates on the front
